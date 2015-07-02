@@ -1,9 +1,9 @@
 require:
-   through2 -> obj as thru
+   ;;through2 -> obj as thru
    earlgrey as eg
 
-module.exports = @->
-   @earl = opts ->
+module.exports = ->
+   this.earl = opts ->
       return chain this:
          @filter with data @->
             try:
