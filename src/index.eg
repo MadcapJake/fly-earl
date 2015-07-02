@@ -1,10 +1,12 @@
-require: earlgrey as eg
+require:
+   ;;through2 -> obj as thru
+   earlgrey as eg
 
-provide: eg-filter
+provide: plugin
 
-eg-filter = @->
-   @earl = opts ->
-      chain this:
+plugin = ->
+   this.earl = opts ->
+      return chain this:
          @filter with data @->
             try:
                return eg.Generator{}.generate{eg.Source(data, data.url)}
