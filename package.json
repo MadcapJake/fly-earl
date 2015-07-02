@@ -4,7 +4,7 @@
   "description": "Fly plugin for Earl Grey",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "earl compile -rvso lib/ src/",
+    "prepublish": "earl compile -rvso ./ src/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jake Russo",
