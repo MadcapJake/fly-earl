@@ -2,7 +2,7 @@ require:
    through2 -> obj as thru
    earlgrey as eg
 
-module.exports = plugin where plugin = @->
+module.exports = @->
    @earl = opts ->
       return chain this:
          @filter with data @->
