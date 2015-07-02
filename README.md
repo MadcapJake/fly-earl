@@ -8,7 +8,16 @@
 
 > [Fly][fly] plugin for [Earl Grey](https://breuleux.github.io/earl-grey/)
 
+
 ## Usage
+
+Currently alpha, use at your own risk.  Will add more details here as they come.
+
+### Install
+
+```a
+npm install -D fly-coffee
+```
 
 ### JavaScript
 
