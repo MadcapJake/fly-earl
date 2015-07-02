@@ -1,0 +1,11 @@
+{
+  "name": "fly-earl",
+  "version": "0.1.0",
+  "description": "Fly plugin for Earl Grey",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jake Russo",
+  "license": "MIT"
+}
