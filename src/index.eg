@@ -1,11 +1,9 @@
 require:
-   ;;through2 -> obj as thru
+   through2 -> obj as thru
    earlgrey as eg
 
-provide: plugin
-
-plugin = ->
-   this.earl = opts ->
+module.exports = plugin where plugin = @->
+   @earl = opts ->
       return chain this:
          @filter with data @->
             try:
