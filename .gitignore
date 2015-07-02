@@ -1,2 +1,5 @@
+*~
+*.map
+lib
 node_modules
 egcache
