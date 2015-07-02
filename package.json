@@ -8,5 +8,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Jake Russo",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "earlgrey": "0.0.8"
+  },
+  "keywords": [
+    "Earl Grey",
+    "Fly"
+  ]
 }

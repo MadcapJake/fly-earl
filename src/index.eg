@@ -1,0 +1,16 @@
+require: earlgrey as eg
+
+provide: eg-filter
+
+eg-filter = @->
+   @earl = opts ->
+      chain this:
+         @filter with data @->
+            try:
+               return eg.Generator{}.generate{eg.Source(data, data.url)}
+            catch err:
+               this.notify .plugin_error: {
+                  plugin = .earl-grey
+                  error = err
+               }
+         @notify .plugin_run: { plugin = .earl-grey }
