@@ -4,7 +4,7 @@ require:
 
 provide: build as earl
 
-method build(opts) =
+build(opts) =
    return chain this:
       @filter with data @->
          try:
