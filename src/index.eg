@@ -2,14 +2,9 @@ require:
    ;;through2 -> obj as thru
    earlgrey as eg
 
-exports.default =  opts ->
-   return chain this:
-      @filter with data @->
-         try:
-            return eg.Generator{}.generate{eg.Source(data, data.url)}
-         catch err:
-            this.notify .plugin_error: {
-               plugin = .earl-grey
-               error = err
-            }
-      @notify .plugin_run: { plugin = .earl-grey }
+module.exports = ->
+   return this.filter with {src, opts} @->
+      try:
+         return eg.Generator{}.generate{eg.Source(src, src.url)}
+      catch e:
+         throw e
