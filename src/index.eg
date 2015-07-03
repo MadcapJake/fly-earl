@@ -6,7 +6,9 @@ exports.default =  opts ->
    return chain this:
       @filter with data @->
          try:
-            return eg.Generator{}.generate{eg.Source(data, data.url)}
+            rval = eg.Generator{}.generate{eg.Source(data, data.url)}
+            print rval
+            return rval
          catch err:
             this.notify .plugin_error: {
                plugin = .earl-grey
