@@ -7,7 +7,7 @@ exports.default =  opts ->
       @filter with data @->
          try:
             rval = eg.Generator{}.generate{eg.Source(data, data.url)}
-            print rval
+            console.log(rval)
             return rval
          catch err:
             this.notify .plugin_error: {
