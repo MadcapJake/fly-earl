@@ -4,6 +4,6 @@ require:
 module.exports = ->
    return this.filter("earl") with {src, opts} @->
       try:
-         return eg.Generator{}.generate{eg.Source(src, src.url)}
+         return eg.Generator{opts}.generate{eg.Source(src, src.url)}
       catch e:
          throw e
