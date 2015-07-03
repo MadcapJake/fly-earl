@@ -1,9 +1,8 @@
 require:
-   ;;through2 -> obj as thru
    earlgrey as eg
 
 module.exports = ->
-   return this.filter with {src, opts} @->
+   return this.filter("earl") with {src, opts} @->
       try:
          return eg.Generator{}.generate{eg.Source(src, src.url)}
       catch e:
