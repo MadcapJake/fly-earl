@@ -15,8 +15,8 @@ Currently alpha, use at your own risk.  Will add more details here as they come.
 
 ### Install
 
-```a
-npm install -D fly-coffee
+```
+npm install -D fly-earl
 ```
 
 ### JavaScript
@@ -25,7 +25,7 @@ npm install -D fly-coffee
 exports.build = function* () {
   yield this
     .source("src/**/*.eg")
-    .earl()
+    .earl({ es5: true})
     .target("dist/")
 }
 ```
@@ -38,7 +38,7 @@ provide: build
 gen build = ->
   yield chain this:
     @source("src/**/*.eg")
-    @earl()
+    @earl({ es5 = true })
     @target("dist/")
 ```
 
