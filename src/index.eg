@@ -3,8 +3,8 @@ require: earlgrey as eg
 module.exports = ->
    return this.filter("earl") with {src, opts} ->
       if opts:
-         try: return eg.Generator{opts}.generate{eg.Source(src, src.url)}.code
+         try: eg.Generator{opts}.generate{eg.Source(src, src.url)}.code
          catch e: throw e
       else:
-         try: return eg.Generator{}.generate{eg.Source(src, src.url)}.code
+         try: eg.Generator{}.generate{eg.Source(src, src.url)}.code
          catch e: throw e
