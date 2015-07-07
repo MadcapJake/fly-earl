@@ -9,7 +9,8 @@
     "tape": "tape test/*.js",
     "test": "npm run tape | tspec",
     "build": "earl compile -rvso ./ src/",
-    "deploy": "npm run build && git push origin master && npm publish"
+    "deploy": "npm run build && git push origin master && npm publish",
+    "test-ci": "node --harmony --harmony_arrow_functions ./node_modules/tape/bin/tape test/*.js"
   },
   "author": {
     "name": "Jake Russo",
