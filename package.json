@@ -6,9 +6,10 @@
   "repository": "github:MadcapJake/fly-earl",
   "main": "lib/index.js",
   "scripts": {
+    "tape": "tape test/*.js",
+    "test": "npm run tape | tspec",
     "build": "earl compile -rvso ./ src/",
-    "deploy": "npm run build && git push origin master && npm publish",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "npm run build && git push origin master && npm publish"
   },
   "author": {
     "name": "Jake Russo",
@@ -17,6 +18,10 @@
   },
   "dependencies": {
     "earlgrey": "0.0.8"
+  },
+  "devDependencies": {
+    "tap-spec": "^4.0.2",
+    "tape": "^4.0.0"
   },
   "keywords": [
     "earlgrey",

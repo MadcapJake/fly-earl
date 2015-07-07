@@ -1,6 +1,7 @@
 *~
-*.js
+index.js
 *.map
+*.log
 lib
 node_modules
 egcache
