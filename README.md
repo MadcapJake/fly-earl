@@ -4,7 +4,7 @@
   </a>
 </div>
 
-> [Earl](https://github.com/MadcapJake/fly-earl) plugin for _[Fly][fly]_.
+> [Earl Grey](https://breuleux.github.io/earl-grey/) plugin for _[Fly][fly]_.
 
 [![][fly-badge]][fly]
 [![npm package][npm-ver-link]][releases]
