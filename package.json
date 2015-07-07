@@ -2,19 +2,28 @@
   "name": "fly-earl",
   "version": "0.1.22",
   "description": "Fly plugin for Earl Grey",
+  "license": "MIT",
+  "repository": "github:MadcapJake/fly-earl",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "earl compile -rvso ./ src/",
+    "build": "earl compile -rvso ./ src/",
+    "deploy": "npm run build && git push origin master && npm publish",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Jake Russo",
-  "license": "MIT",
+  "author": {
+    "name": "Jake Russo",
+    "email": "madcap.russo@gmail.com",
+    "url": "http://github.com/MadcapJake"
+  },
   "dependencies": {
     "earlgrey": "0.0.8"
   },
   "keywords": [
-    "Earl Grey",
-    "Fly"
+    "earlgrey",
+    "fly"
   ],
-  "repository": "github:MadcapJake/fly-earl"
+  "engines": {
+    "iojs": ">= 1.0.0",
+    "node": ">= 0.11.0"
+  }
 }
