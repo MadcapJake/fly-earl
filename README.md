@@ -11,8 +11,23 @@
 
 ## Usage
 
-Currently alpha, use at your own risk.  Will add more details here as they come.
+```
+yield this.source(glob).earl([opts])
+```
+`opts.es5` is a boolean option to change compilation to ES5.  Defaults to false.
 
+`opts.sourceMaps` is a string that specifies how to handle sourcemaps. `.compute` will compute sourcemaps but does not place `sourceMappingURL` within the file. `.inline` does add it.  The default is null.
+
+`opts.runtime` is a string that specifies which runtime to require.  If null, no runtime is used and this removes some boilerplate code.  This defaults to requiring `earlgrey-runtime`.
+
+`opts.parameters` is an object containing flags that you can pass right into your programs to be accessed by macros via `@getopt("flagName")`.  Flags are not limited to booleans and can be any arbitray data. For example:
+```earl-grey
+parameters = {
+  debug-level = .critical
+  test-data = {"Pepperoni", "Cheese", "Sausage", "Peppers"}
+  tests = false
+}
+```
 ### Install
 
 ```
