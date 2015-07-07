@@ -4,15 +4,18 @@
   </a>
 </div>
 
-[![][fly-badge]]([fly]) ![][mit-badge]
+> [Earl](https://github.com/MadcapJake/fly-earl) plugin for _[Fly][fly]_.
 
-> [Fly][fly] plugin for [Earl Grey](https://breuleux.github.io/earl-grey/)
-
+[![][fly-badge]][fly]
+[![npm package][npm-ver-link]][releases]
+[![][dl-badge]][npm-pkg-link]
+[![][travis-badge]][travis-link]
+[![][mit-badge]][mit]
 
 ## Usage
 
-```
-yield this.source(glob).earl([opts])
+```js
+yield this.source(glob).earl([opts]).target(outputDir)
 ```
 `opts.es5` is a boolean option to change compilation to ES5.  Defaults to false.
 
@@ -34,7 +37,9 @@ parameters = {
 npm install -D fly-earl
 ```
 
-### JavaScript
+### Examples
+
+#### JavaScript
 
 ```js
 exports.build = function* () {
@@ -45,7 +50,7 @@ exports.build = function* () {
 }
 ```
 
-### Earl Grey
+#### Earl Grey
 
 ```earl-grey
 provide: build
@@ -57,22 +62,19 @@ gen build = ->
     @target("dist/")
 ```
 
-### Roadmap ✈
-
-+ Source Maps.
-
 # License
 
-[MIT](http://opensource.org/licenses/MIT) © [Jacob Russo][author] [et al.](https://github.com/bucaran/fly-earl/graphs/contributors)
+[MIT][mit] © [Jake Russo][author] et [al][contributors]
 
-
-
-
-[author]: http://madcapjake.com
-
-[fly]: https://github.com/flyjs/fly
-
-[fly-badge]: https://img.shields.io/badge/fly-JS-05B3E1.svg?style=flat-square
-[mit-badge]: https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square
-
+[mit]:          http://opensource.org/licenses/MIT
+[author]:       http://github.com/MadcapJake
+[contributors]: https://github.com/MadcapJake/fly-earl/graphs/contributors
+[releases]:     https://github.com/MadcapJake/fly-earl/releases
+[fly]:          https://www.github.com/flyjs/fly
+[fly-badge]:    https://img.shields.io/badge/fly-JS-05B3E1.svg?style=flat-square
+[mit-badge]:    https://img.shields.io/badge/license-MIT-444444.svg?style=flat-square
 [npm-pkg-link]: https://www.npmjs.org/package/fly-earl
+[npm-ver-link]: https://img.shields.io/npm/v/fly-earl.svg?style=flat-square
+[dl-badge]:     http://img.shields.io/npm/dm/fly-earl.svg?style=flat-square
+[travis-link]:  https://travis-ci.org/MadcapJake/fly-earl
+[travis-badge]: http://img.shields.io/travis/MadcapJake/fly-earl.svg?style=flat-square
