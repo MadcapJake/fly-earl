@@ -1,0 +1,4 @@
+{
+  "cmd": "npm test && npm run build",
+  "name": "NPM Test & Build"
+}
