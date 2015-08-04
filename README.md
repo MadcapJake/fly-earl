@@ -45,7 +45,7 @@ npm install -D fly-earl
 exports.build = function* () {
   yield this
     .source("src/**/*.eg")
-    .earl({ es5: true})
+    .earl({ es5: true })
     .target("dist/")
 }
 ```
