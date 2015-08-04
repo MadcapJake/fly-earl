@@ -6,7 +6,7 @@
   "repository": "github:MadcapJake/fly-earl",
   "main": "lib/index.js",
   "scripts": {
-    "tape": "tape test/*.js",
+    "tape": "earltape test/*.eg",
     "test": "npm run tape | tspec",
     "build": "earl compile -rvso ./ src/",
     "deploy": "npm run build && git push origin master && npm publish",
