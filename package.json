@@ -21,7 +21,7 @@
     "earlgrey": "0.0.9"
   },
   "devDependencies": {
-    "earltape": "^0.1.0",
+    "earltape": "^0.2.0",
     "tap-spec": "^4.0.2",
     "tape": "^4.0.0"
   },

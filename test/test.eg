@@ -1,6 +1,5 @@
-require:
-   tape -> test
-   ../src/index
+require-macros: earltape -> test
+require: ../src/index
 
 earl = """fib(n) =
    var {a, b} = {1, 1}
@@ -14,11 +13,11 @@ print 'The first ten fibonacci numbers are {fibs.join(", ")}'
 javascript = """
 'use strict';require('earlgrey-runtime/6');let m$1;let acc$0;let temp$0;let t$0;let fib$0;let fibs$0;fib$0=(function fib(n$0){let t0$0;let t1$0;let m$0;let $targ$0;let a$0;let b$0;$targ$0=[1,1];t0$0=$targ$0;if((Array.isArray(t0$0)&&((t1$0=t0$0.length),(t1$0===2)))){a$0=t0$0[0];b$0=t0$0[1];}else{___match_error($targ$0,"var {a, b}");}[a$0,b$0];m$0=null;$0:for(m$0 of range(1,n$0)){let t0$1;let t1$1;let $targ$1;let i$0;i$0=m$0;$targ$1=[b$0,(a$0+b$0)];t0$1=$targ$1;if((Array.isArray(t0$1)&&((t1$1=t0$1.length),(t1$1===2)))){a$0=t0$1[0];b$0=t0$1[1];}else{___match_error($targ$1,"{a, b}");}[a$0,b$0];}return a$0;});acc$0=[];temp$0=null;m$1=null;$1:for(m$1 of range(0,10)){let i$1;i$1=m$1;temp$0=fib$0(i$1);acc$0.push(temp$0);}fibs$0=acc$0;t$0=ENode([],({}),["The first ten fibonacci numbers are ",fibs$0.join(", ")]).toString();console.log(t$0);t$0;"""
 
-test "fly-earl": t ->
-   t.plan(3)
+test "fly-earl":
+   @plan(3)
    index.call with {
       filter = (name, transform, options) ->
-         t.equal(name, "earl", "add earl filter")
-         t.equal(javascript, transform(earl), "Earl Grey transform")
-         t.equal(options.ext, ".eg", "extension is .eg")
+         @equal(name, "earl", "add earl filter")
+         @equal(javascript, transform(earl), "Earl Grey transform")
+         @equal(options.ext, ".eg", "extension is .eg")
    }
