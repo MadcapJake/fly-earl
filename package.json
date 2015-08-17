@@ -27,7 +27,8 @@
   },
   "keywords": [
     "earlgrey",
-    "fly"
+    "fly",
+    "fly-plugin"
   ],
   "engines": {
     "iojs": ">= 1.0.0",

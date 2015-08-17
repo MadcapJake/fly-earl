@@ -2,5 +2,5 @@ require: earlgrey as eg
 
 module.exports = @->
    @filter("earl", fn, { ext = ".eg" }) where fn = (src, opts) ->
-      try: eg.Generator{opts or {=}}.generate{eg.Source(src, src.url)}.code
+      try: eg.Generator{opts or {=}}.generate{eg.Source(src.to-string(), src.url)}.code
       catch e: throw e
